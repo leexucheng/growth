@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cs.dao.DbsUserMapper" >
+  <resultMap id="BaseResultMap" type="com.cs.model.DbsUser" >
+    <id column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="real_name" property="realName" jdbcType="VARCHAR" />
+    <result column="nick_name" property="nickName" jdbcType="VARCHAR" />
+    <result column="birthday" property="birthday" jdbcType="DATE" />
+    <result column="id_card" property="idCard" jdbcType="VARCHAR" />
+    <result column="country" property="country" jdbcType="VARCHAR" />
+    <result column="province" property="province" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="area" property="area" jdbcType="VARCHAR" />
+    <result column="industry" property="industry" jdbcType="VARCHAR" />
+    <result column="favor_trade" property="favorTrade" jdbcType="VARCHAR" />
+    <result column="score" property="score" jdbcType="INTEGER" />
+    <result column="sex" property="sex" jdbcType="VARCHAR" />
+    <result column="introduction" property="introduction" jdbcType="VARCHAR" />
+    <result column="corp_name" property="corpName" jdbcType="VARCHAR" />
+    <result column="mobile" property="mobile" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="dbs_duty" property="dbsDuty" jdbcType="VARCHAR" />
+    <result column="balance" property="balance" jdbcType="VARCHAR" />
+    <result column="invite_count" property="inviteCount" jdbcType="INTEGER" />
+    <result column="career" property="career" jdbcType="VARCHAR" />
+    <result column="dbs_count" property="dbsCount" jdbcType="INTEGER" />
+    <result column="dbs_ask_count" property="dbsAskCount" jdbcType="INTEGER" />
+    <result column="dbs_valid_count" property="dbsValidCount" jdbcType="INTEGER" />
+    <result column="dbs_suc_rate" property="dbsSucRate" jdbcType="DOUBLE" />
+    <result column="be_complaind_count" property="beComplaindCount" jdbcType="INTEGER" />
+    <result column="user_code" property="userCode" jdbcType="VARCHAR" />
+    <result column="is_professional" property="isProfessional" jdbcType="VARCHAR" />
+    <result column="is_expert" property="isExpert" jdbcType="VARCHAR" />
+    <result column="is_judger" property="isJudger" jdbcType="VARCHAR" />
+    <result column="head_img" property="headImg" jdbcType="VARCHAR" />
+    <result column="cost" property="cost" jdbcType="VARCHAR" />
+    <result column="certificate_img" property="certificateImg" jdbcType="VARCHAR" />
+    <result column="card_img1" property="cardImg1" jdbcType="VARCHAR" />
+    <result column="card_img2" property="cardImg2" jdbcType="VARCHAR" />
+    <result column="corp_img" property="corpImg" jdbcType="VARCHAR" />
+    <result column="parent_code" property="parentCode" jdbcType="VARCHAR" />
+    <result column="favor" property="favor" jdbcType="INTEGER" />
+    <result column="hate" property="hate" jdbcType="INTEGER" />
+    <result column="is_checked" property="isChecked" jdbcType="VARCHAR" />
+    <result column="check_advice" property="checkAdvice" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="UserAndCashIncomeMap" type="map" >
+    <id column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="real_name" property="realName" jdbcType="VARCHAR" />
+    <result column="nick_name" property="nickName" jdbcType="VARCHAR" />
+    <result column="birthday" property="birthday" jdbcType="DATE" />
+    <result column="id_card" property="idCard" jdbcType="VARCHAR" />
+    <result column="country" property="country" jdbcType="VARCHAR" />
+    <result column="province" property="province" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="area" property="area" jdbcType="VARCHAR" />
+    <result column="industry" property="industry" jdbcType="VARCHAR" />
+    <result column="favor_trade" property="favorTrade" jdbcType="VARCHAR" />
+    <result column="score" property="score" jdbcType="INTEGER" />
+    <result column="sex" property="sex" jdbcType="VARCHAR" />
+    <result column="introduction" property="introduction" jdbcType="VARCHAR" />
+    <result column="corp_name" property="corpName" jdbcType="VARCHAR" />
+    <result column="mobile" property="mobile" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="dbs_duty" property="dbsDuty" jdbcType="VARCHAR" />
+    <result column="balance" property="balance" jdbcType="VARCHAR" />
+    <result column="invite_count" property="inviteCount" jdbcType="INTEGER" />
+    <result column="career" property="career" jdbcType="VARCHAR" />
+    <result column="dbs_count" property="dbsCount" jdbcType="INTEGER" />
+    <result column="dbs_ask_count" property="dbsAskCount" jdbcType="INTEGER" />
+    <result column="dbs_valid_count" property="dbsValidCount" jdbcType="INTEGER" />
+    <result column="dbs_suc_rate" property="dbsSucRate" jdbcType="DOUBLE" />
+    <result column="be_complaind_count" property="beComplaindCount" jdbcType="INTEGER" />
+    <result column="user_code" property="userCode" jdbcType="VARCHAR" />
+    <result column="is_professional" property="isProfessional" jdbcType="VARCHAR" />
+    <result column="is_expert" property="isExpert" jdbcType="VARCHAR" />
+    <result column="is_judger" property="isJudger" jdbcType="VARCHAR" />
+    <result column="head_img" property="headImg" jdbcType="VARCHAR" />
+    <result column="cost" property="cost" jdbcType="VARCHAR" />
+    <result column="certificate_img" property="certificateImg" jdbcType="VARCHAR" />
+    <result column="card_img1" property="cardImg1" jdbcType="VARCHAR" />
+    <result column="card_img2" property="cardImg2" jdbcType="VARCHAR" />
+    <result column="corp_img" property="corpImg" jdbcType="VARCHAR" />
+    <result column="parent_code" property="parentCode" jdbcType="VARCHAR" />
+    <result column="favor" property="favor" jdbcType="INTEGER" />
+    <result column="hate" property="hate" jdbcType="INTEGER" />
+    <result column="is_checked" property="isChecked" jdbcType="VARCHAR" />
+    <result column="check_advice" property="checkAdvice" jdbcType="VARCHAR" />
+    <result column="wealth" property="wealth" jdbcType="DECIMAL" />
+    <result column="state" property="state" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    user_id, real_name, nick_name, birthday, id_card, country, province, city,area, industry, 
+    favor_trade, score, sex, introduction, corp_name, mobile, email, dbs_duty, balance, 
+    invite_count, career, dbs_count, dbs_ask_count, dbs_valid_count, dbs_suc_rate, be_complaind_count, user_code, card_img1,card_img2,corp_img,
+    is_professional, is_expert, is_judger, head_img,parent_code,certificate_img,favor,hate,is_checked,check_advice
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.cs.model.DbsUserExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from dbs_user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+    <if test="start != null and pageSize != null">
+      limit ${start},${pageSize}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from dbs_user
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByUserCode" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from dbs_user
+    where user_code = #{userCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from dbs_user
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.cs.model.DbsUserExample" >
+    delete from dbs_user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.cs.model.DbsUser" >
+    insert into dbs_user (user_id, real_name, nick_name, 
+      birthday, id_card, country, 
+      province, city,area, industry, 
+      favor_trade, score, sex, 
+      introduction, corp_name, mobile, 
+      email, dbs_duty, balance, 
+      invite_count, career, dbs_count, 
+      dbs_valid_count, be_complaind_count, user_code, 
+      is_professional, is_expert, is_judger, 
+      head_img)
+    values (#{userId,jdbcType=VARCHAR}, #{realName,jdbcType=VARCHAR}, #{nickName,jdbcType=VARCHAR}, 
+      #{birthday,jdbcType=DATE}, #{idCard,jdbcType=VARCHAR}, #{country,jdbcType=VARCHAR}, 
+      #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR},#{area,jdbcType=VARCHAR}, #{industry,jdbcType=VARCHAR}, 
+      #{favorTrade,jdbcType=VARCHAR}, #{score,jdbcType=INTEGER}, #{sex,jdbcType=VARCHAR}, 
+      #{introduction,jdbcType=VARCHAR}, #{corpName,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{dbsDuty,jdbcType=VARCHAR}, #{balance,jdbcType=VARCHAR}, 
+      #{inviteCount,jdbcType=INTEGER}, #{career,jdbcType=VARCHAR}, #{dbsCount,jdbcType=INTEGER}, 
+      #{dbsValidCount,jdbcType=INTEGER}, #{beComplaindCount,jdbcType=INTEGER}, #{userCode,jdbcType=VARCHAR}, 
+      #{isProfessional,jdbcType=VARCHAR}, #{isExpert,jdbcType=VARCHAR}, #{isJudger,jdbcType=VARCHAR}, 
+      #{headImg,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.cs.model.DbsUser" >
+    insert into dbs_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="realName != null" >
+        real_name,
+      </if>
+      <if test="nickName != null" >
+        nick_name,
+      </if>
+      <if test="nickName == null and userCode != null" >
+        nick_name,
+      </if>
+      <if test="birthday != null" >
+        birthday,
+      </if>
+      <if test="idCard != null" >
+        id_card,
+      </if>
+      <if test="country != null" >
+        country,
+      </if>
+      <if test="province != null" >
+        province,
+      </if>
+      <if test="city != null" >
+        city,
+      </if>
+      <if test="area != null" >
+        area,
+      </if>
+      <if test="industry != null" >
+        industry,
+      </if>
+      <if test="favorTrade != null" >
+        favor_trade,
+      </if>
+      <if test="score != null" >
+        score,
+      </if>
+      <if test="sex != null" >
+        sex,
+      </if>
+      <if test="introduction != null" >
+        introduction,
+      </if>
+      <if test="corpName != null" >
+        corp_name,
+      </if>
+      <if test="mobile != null" >
+        mobile,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="dbsDuty != null" >
+        dbs_duty,
+      </if>
+      <if test="balance != null" >
+        balance,
+      </if>
+      <if test="inviteCount != null" >
+        invite_count,
+      </if>
+      <if test="career != null" >
+        career,
+      </if>
+      <if test="dbsCount != null" >
+        dbs_count,
+      </if>
+      <if test="dbsValidCount != null" >
+        dbs_valid_count,
+      </if>
+      <if test="beComplaindCount != null" >
+        be_complaind_count,
+      </if>
+      <if test="userCode != null" >
+        user_code,
+      </if>
+      <if test="isProfessional != null" >
+        is_professional,
+      </if>
+      <if test="isExpert != null" >
+        is_expert,
+      </if>
+      <if test="isJudger != null" >
+        is_judger,
+      </if>
+      <if test="headImg != null" >
+        head_img,
+      </if>
+      <if test="parentCode != null" >
+        parent_code,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="realName != null" >
+        #{realName,jdbcType=VARCHAR},
+      </if>
+      <if test="nickName != null" >
+        #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="nickName == null and userCode != null" >
+        concat('YH',#{userCode,jdbcType=VARCHAR}),
+      </if>
+      <if test="birthday != null" >
+        #{birthday,jdbcType=DATE},
+      </if>
+      <if test="idCard != null" >
+        #{idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="country != null" >
+        #{country,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null" >
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null" >
+        #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null" >
+        #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="favorTrade != null" >
+        #{favorTrade,jdbcType=VARCHAR},
+      </if>
+      <if test="score != null" >
+        #{score,jdbcType=INTEGER},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null" >
+        #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="corpName != null" >
+        #{corpName,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null" >
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="dbsDuty != null" >
+        #{dbsDuty,jdbcType=VARCHAR},
+      </if>
+      <if test="balance != null" >
+        #{balance,jdbcType=VARCHAR},
+      </if>
+      <if test="inviteCount != null" >
+        #{inviteCount,jdbcType=INTEGER},
+      </if>
+      <if test="career != null" >
+        #{career,jdbcType=VARCHAR},
+      </if>
+      <if test="dbsCount != null" >
+        #{dbsCount,jdbcType=INTEGER},
+      </if>
+      <if test="dbsValidCount != null" >
+        #{dbsValidCount,jdbcType=INTEGER},
+      </if>
+      <if test="beComplaindCount != null" >
+        #{beComplaindCount,jdbcType=INTEGER},
+      </if>
+      <if test="userCode != null" >
+        #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="isProfessional != null" >
+        #{isProfessional,jdbcType=VARCHAR},
+      </if>
+      <if test="isExpert != null" >
+        #{isExpert,jdbcType=VARCHAR},
+      </if>
+      <if test="isJudger != null" >
+        #{isJudger,jdbcType=VARCHAR},
+      </if>
+      <if test="headImg != null" >
+        #{headImg,jdbcType=VARCHAR},
+      </if>
+      <if test="parentCode != null" >
+        #{parentCode,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.cs.model.DbsUserExample" resultType="java.lang.Integer" >
+    select count(*) from dbs_user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update dbs_user
+    <set >
+      <if test="record.userId != null" >
+        user_id = #{record.userId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.realName != null" >
+        real_name = #{record.realName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.nickName != null" >
+        nick_name = #{record.nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.birthday != null" >
+        birthday = #{record.birthday,jdbcType=DATE},
+      </if>
+      <if test="record.idCard != null" >
+        id_card = #{record.idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="record.country != null" >
+        country = #{record.country,jdbcType=VARCHAR},
+      </if>
+      <if test="record.province != null" >
+        province = #{record.province,jdbcType=VARCHAR},
+      </if>
+      <if test="record.city != null" >
+        city = #{record.city,jdbcType=VARCHAR},
+      </if>
+      <if test="record.area != null" >
+        area = #{record.area,jdbcType=VARCHAR},
+      </if>
+      <if test="record.industry != null" >
+        industry = #{record.industry,jdbcType=VARCHAR},
+      </if>
+      <if test="record.favorTrade != null" >
+        favor_trade = #{record.favorTrade,jdbcType=VARCHAR},
+      </if>
+      <if test="record.score != null" >
+        score = #{record.score,jdbcType=INTEGER},
+      </if>
+      <if test="record.sex != null" >
+        sex = #{record.sex,jdbcType=VARCHAR},
+      </if>
+      <if test="record.introduction != null" >
+        introduction = #{record.introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="record.corpName != null" >
+        corp_name = #{record.corpName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mobile != null" >
+        mobile = #{record.mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="record.email != null" >
+        email = #{record.email,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dbsDuty != null" >
+        dbs_duty = #{record.dbsDuty,jdbcType=VARCHAR},
+      </if>
+      <if test="record.balance != null" >
+        balance = #{record.balance,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inviteCount != null" >
+        invite_count = #{record.inviteCount,jdbcType=INTEGER},
+      </if>
+      <if test="record.career != null" >
+        career = #{record.career,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dbsCount != null" >
+        dbs_count = #{record.dbsCount,jdbcType=INTEGER},
+      </if>
+      <if test="record.dbsValidCount != null" >
+        dbs_valid_count = #{record.dbsValidCount,jdbcType=INTEGER},
+      </if>
+      <if test="record.beComplaindCount != null" >
+        be_complaind_count = #{record.beComplaindCount,jdbcType=INTEGER},
+      </if>
+      <if test="record.userCode != null" >
+        user_code = #{record.userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isProfessional != null" >
+        is_professional = #{record.isProfessional,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isExpert != null" >
+        is_expert = #{record.isExpert,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isJudger != null" >
+        is_judger = #{record.isJudger,jdbcType=VARCHAR},
+      </if>
+      <if test="record.headImg != null" >
+        head_img = #{record.headImg,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cost != null" >
+        cost = #{record.cost,jdbcType=VARCHAR},
+      </if>
+      <if test="record.certificateImg != null" >
+        certificate_img = #{record.certificateImg,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cardImg1 != null" >
+        card_img1 = #{record.cardImg1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cardImg2 != null" >
+        card_img2 = #{record.cardImg2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.corpImg != null" >
+        corp_img = #{record.corpImg,jdbcType=VARCHAR},
+      </if>
+      <if test="record.parentCode != null" >
+        parent_code = #{record.parentCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isChecked != null" >
+        is_checked = #{record.isChecked,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update dbs_user
+    set user_id = #{record.userId,jdbcType=VARCHAR},
+      real_name = #{record.realName,jdbcType=VARCHAR},
+      nick_name = #{record.nickName,jdbcType=VARCHAR},
+      birthday = #{record.birthday,jdbcType=DATE},
+      id_card = #{record.idCard,jdbcType=VARCHAR},
+      country = #{record.country,jdbcType=VARCHAR},
+      province = #{record.province,jdbcType=VARCHAR},
+      city = #{record.city,jdbcType=VARCHAR},
+      area = #{record.area,jdbcType=VARCHAR},
+      industry = #{record.industry,jdbcType=VARCHAR},
+      favor_trade = #{record.favorTrade,jdbcType=VARCHAR},
+      score = #{record.score,jdbcType=INTEGER},
+      sex = #{record.sex,jdbcType=VARCHAR},
+      introduction = #{record.introduction,jdbcType=VARCHAR},
+      corp_name = #{record.corpName,jdbcType=VARCHAR},
+      mobile = #{record.mobile,jdbcType=VARCHAR},
+      email = #{record.email,jdbcType=VARCHAR},
+      dbs_duty = #{record.dbsDuty,jdbcType=VARCHAR},
+      balance = #{record.balance,jdbcType=VARCHAR},
+      invite_count = #{record.inviteCount,jdbcType=INTEGER},
+      career = #{record.career,jdbcType=VARCHAR},
+      dbs_count = #{record.dbsCount,jdbcType=INTEGER},
+      dbs_valid_count = #{record.dbsValidCount,jdbcType=INTEGER},
+      be_complaind_count = #{record.beComplaindCount,jdbcType=INTEGER},
+      user_code = #{record.userCode,jdbcType=VARCHAR},
+      is_professional = #{record.isProfessional,jdbcType=VARCHAR},
+      is_expert = #{record.isExpert,jdbcType=VARCHAR},
+      is_judger = #{record.isJudger,jdbcType=VARCHAR},
+      head_img = #{record.headImg,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cs.model.DbsUser" >
+    update dbs_user
+    <set >
+      <if test="realName != null" >
+        real_name = #{realName,jdbcType=VARCHAR},
+      </if>
+      <if test="nickName != null" >
+        nick_name = #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null" >
+        birthday = #{birthday,jdbcType=DATE},
+      </if>
+      <if test="idCard != null" >
+        id_card = #{idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="country != null" >
+        country = #{country,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null" >
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        area = #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null" >
+        industry = #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="favorTrade != null" >
+        favor_trade = #{favorTrade,jdbcType=VARCHAR},
+      </if>
+      <if test="score != null" >
+        score = #{score,jdbcType=INTEGER},
+      </if>
+      <if test="sex != null" >
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null" >
+        introduction = #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="corpName != null" >
+        corp_name = #{corpName,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null" >
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="dbsDuty != null" >
+        dbs_duty = #{dbsDuty,jdbcType=VARCHAR},
+      </if>
+      <if test="balance != null" >
+        balance = #{balance,jdbcType=VARCHAR},
+      </if>
+      <if test="inviteCount != null" >
+        invite_count = #{inviteCount,jdbcType=INTEGER},
+      </if>
+      <if test="career != null" >
+        career = #{career,jdbcType=VARCHAR},
+      </if>
+      <if test="dbsCount != null" >
+        dbs_count = #{dbsCount,jdbcType=INTEGER},
+      </if>
+      <if test="dbsAskCount != null" >
+        dbs_ask_count = #{dbsAskCount,jdbcType=INTEGER},
+      </if>
+      <if test="dbsValidCount != null" >
+        dbs_valid_count = #{dbsValidCount,jdbcType=INTEGER},
+      </if>
+      <if test="dbsSucRate != null" >
+        dbs_suc_rate = #{dbsSucRate,jdbcType=DOUBLE},
+      </if>
+      <if test="beComplaindCount != null" >
+        be_complaind_count = #{beComplaindCount,jdbcType=INTEGER},
+      </if>
+      <if test="userCode != null" >
+        user_code = #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="isProfessional != null" >
+        is_professional = #{isProfessional,jdbcType=VARCHAR},
+      </if>
+      <if test="isExpert != null" >
+        is_expert = #{isExpert,jdbcType=VARCHAR},
+      </if>
+      <if test="isJudger != null" >
+        is_judger = #{isJudger,jdbcType=VARCHAR},
+      </if>
+      <if test="headImg != null" >
+        head_img = #{headImg,jdbcType=VARCHAR},
+      </if>
+      <if test="favor != null" >
+        favor = #{favor,jdbcType=VARCHAR},
+      </if>
+      <if test="hate != null" >
+        hate = #{hate,jdbcType=VARCHAR},
+      </if>
+      <if test="isChecked != null" >
+        is_checked = #{isChecked,jdbcType=VARCHAR},
+      </if>
+      <if test="checkAdvice != null" >
+        check_advice = #{checkAdvice,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cs.model.DbsUser" >
+    update dbs_user
+    set real_name = #{realName,jdbcType=VARCHAR},
+      nick_name = #{nickName,jdbcType=VARCHAR},
+      birthday = #{birthday,jdbcType=DATE},
+      id_card = #{idCard,jdbcType=VARCHAR},
+      country = #{country,jdbcType=VARCHAR},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      area = #{area,jdbcType=VARCHAR},
+      industry = #{industry,jdbcType=VARCHAR},
+      favor_trade = #{favorTrade,jdbcType=VARCHAR},
+      score = #{score,jdbcType=INTEGER},
+      sex = #{sex,jdbcType=VARCHAR},
+      introduction = #{introduction,jdbcType=VARCHAR},
+      corp_name = #{corpName,jdbcType=VARCHAR},
+      mobile = #{mobile,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      dbs_duty = #{dbsDuty,jdbcType=VARCHAR},
+      balance = #{balance,jdbcType=VARCHAR},
+      invite_count = #{inviteCount,jdbcType=INTEGER},
+      career = #{career,jdbcType=VARCHAR},
+      dbs_count = #{dbsCount,jdbcType=INTEGER},
+      dbs_valid_count = #{dbsValidCount,jdbcType=INTEGER},
+      be_complaind_count = #{beComplaindCount,jdbcType=INTEGER},
+      user_code = #{userCode,jdbcType=VARCHAR},
+      is_professional = #{isProfessional,jdbcType=VARCHAR},
+      is_expert = #{isExpert,jdbcType=VARCHAR},
+      is_judger = #{isJudger,jdbcType=VARCHAR},
+      head_img = #{headImg,jdbcType=VARCHAR}
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+  
+  <!-- 列表及用户信息 -->
+  <resultMap type="java.util.Map" id="UserListMap">
+    <result column="real_name" property="realName" jdbcType="VARCHAR" />
+    <result column="nick_name" property="nickName" jdbcType="VARCHAR" />
+    <result column="industry" property="industry" jdbcType="VARCHAR" />
+    <result column="introduction" property="introduction" jdbcType="VARCHAR" />
+    <result column="career" property="career" jdbcType="VARCHAR" />
+    <result column="user_code" property="userCode" jdbcType="VARCHAR" />
+    <result column="head_img" property="headImg" jdbcType="VARCHAR" />
+    <result column="is_expert" property="isExpert" jdbcType="VARCHAR" />
+    <result column="total_size" property="totalSize" jdbcType="INTEGER" />
+  </resultMap>
+  
+  <select id="selectUserListByPager" resultMap="UserListMap" parameterType="java.util.Map">
+  	select 
+  		<if test="resultType == 'count'">
+  			count(1) as total_size
+  		</if>
+  		<if test="resultType == 'record'">
+  			u.nick_name,u.real_name,u.head_img,u.user_code,u.career,u.industry,u.introduction,u.is_expert
+  		</if>
+	from dbs_user u
+	
+	where 1=1
+	<if test="industry != null">
+		and 
+		<foreach collection="industry" item="item" open="(" close=")" separator="or">
+			u.industry like concat('%',#{item},'%')
+		</foreach>
+	</if>
+	<if test="area != null">
+		and u.area = #{area}
+	</if>
+	<if test="isExpert != null">
+		and u.is_expert = #{isExpert}
+	</if>
+	<if test="parentCode != null">
+		and u.parent_code = #{parentCode}
+	</if>
+	<if test="extraCondition != null">
+		${extraCondition}
+	</if>
+	
+	<if test="orderBy != null">
+		order by ${orderBy}
+	</if>
+	<if test="start != null and size != null">
+		limit ${start},${size}
+	</if>
+  </select>
+  
+  <!-- 找出指定用户的上级和上上级 -->
+  <resultMap type="java.util.Map" id="ParentsMap">
+    <result column="user_code" property="userCode" jdbcType="VARCHAR" />
+    <result column="parent_code" property="parentCode" jdbcType="VARCHAR" />
+    <result column="grandpa_code" property="grandpaCode" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <resultMap type="java.util.Map" id="RankingMap">
+    <result column="user_code" property="userCode" jdbcType="VARCHAR" />
+    <result column="score" property="score" jdbcType="INTEGER" />
+    <result column="num" property="num" jdbcType="INTEGER" />
+  </resultMap>
+  
+  <select id="selectParentsByUserCode" parameterType="java.lang.String" resultMap="ParentsMap">
+  	select s.user_code,s.parent_code,p.parent_code grandpa_code 
+  	from dbs_user s join dbs_user p on p.user_code = s.parent_code
+	where 1=1 and s.user_code = #{userCode}
+  </select>
+  
+  <select id="selectParentDataByUserCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+  	select * from dbs_user where user_code = 
+		(SELECT u.parent_code FROM DBS_USER u where u.user_code = #{userCode})
+  </select>
+  
+  <select id="selectUserScoreRank" parameterType="java.lang.String" resultMap="RankingMap">
+  	select * from (
+	  	select a.user_code,score,@n:=@n+1 as num from
+			(select user_code,score from dbs_user WHERE score is not null order by score desc) a,
+			(select @n:=0) b 
+	) t where user_code = #{userCode}
+  </select>
+  <select id="selectUserCode" parameterType="com.cs.model.DbsUserExample" resultType="java.lang.String">
+  	select user_code from dbs_user
+  	 <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <select id="selectByCondition" resultMap="BaseResultMap" parameterType="map">
+  	select * from dbs_user u WHERE 1=1
+  	<if test="condition == 1">and user_code not in (select DISTINCT user_code from (
+	select DISTINCT user_code from dbs_task t 
+	union all
+	select DISTINCT reply_user_code from dbs_question_reply ) a
+	)</if>
+  	<if test="condition == 2">and user_code in (select DISTINCT user_code from (
+	select DISTINCT user_code from dbs_task t 
+	union all
+	select DISTINCT reply_user_code from dbs_question_reply ) a
+	)</if>
+    <if test="start != null and pageSize != null">
+      limit ${start},${pageSize}
+    </if>
+  </select>
+  <select id="countByCondition" parameterType="map" resultType="java.lang.Integer">
+  	select count(1) from dbs_user u WHERE 1=1
+  	<if test="condition == 1">and user_code not in (select DISTINCT user_code from (
+	select DISTINCT user_code from dbs_task t 
+	union all
+	select DISTINCT reply_user_code from dbs_question_reply ) a
+	)</if>
+  	<if test="condition == 2">and user_code in (select DISTINCT user_code from (
+	select DISTINCT user_code from dbs_task t 
+	union all
+	select DISTINCT reply_user_code from dbs_question_reply ) a
+	)</if>
+  </select>
+  <select id="topTen" parameterType="map" resultType="map">
+  	select nick_name nickName, dbs_count dbsCount, score, dbs_valid_count dbsValidCount, dbs_ask_count dbsAskCount, dbs_suc_rate dbsSucRate 
+  	from dbs_user 
+  	ORDER BY ${orderKey} desc limit 0,16
+  </select>
+  <select id="topTenPop" resultType="map">
+  	select nick_name nickName, count(parent_code) pop from dbs_user GROUP BY parent_code ORDER BY pop desc limit 0,16
+  </select>
+  <select id="topTenWealth" resultType="map">
+  	select nick_name nickName, sum(amount) wealth from dbs_user, dbs_cash_income where dbs_user.user_code=dbs_cash_income.user_code and 
+  	state = '悬赏' OR '提成1' OR '提成2' GROUP BY nickName ORDER BY wealth desc limit 0,16 
+  </select>
+  <select id="ranking" parameterType="map" resultType="int">
+	select ranking from (
+	select user_code, @n:=@n+1 as ranking from
+		(select user_code from dbs_user order by 
+		${orderKey} desc) a,
+		(select @n:=0) b ) t where user_code = #{userCode}
+  </select>  
+  <select id="rankingPop" parameterType="java.lang.String" resultType="int">
+  	select ranking from ( select pop,@n:=@n+1 ranking ,parent_code from (select count(parent_code) pop,
+	parent_code from dbs_user GROUP BY parent_code ORDER BY pop desc) a, (select @n:=0) b ) t where parent_code = #{userCode}
+  </select>
+  <select id="rankingWealth" parameterType="java.lang.String" resultType="int">
+  	SELECT ranking from (
+	select a.*,@n:=@n+1 ranking from 
+	(select sum(amount) wealth,dbs_user.user_code from dbs_user, dbs_cash_income where dbs_user.user_code=dbs_cash_income.user_code and 
+			state = '悬赏' OR '提成1' OR '提成2' GROUP BY nick_name ORDER BY wealth desc ) a,
+	(select @n:=0) b ) t where user_code = #{userCode}
+  </select>
+</mapper>

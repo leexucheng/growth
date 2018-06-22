@@ -1,0 +1,65 @@
+var _r_banners = [{
+	img:'http://59.110.171.135:8080/dbs/upload/banner/banner1.jpg',
+	action:'tab.index-expert-list',
+	type:'',
+	param:'出行-出行服务'
+},{
+	img:'http://59.110.171.135:8080/dbs/upload/banner/1.jpg',
+	action:'tab.index-expert-list',
+	type:'',
+	param:'形象-美容'
+},{
+	img:'http://59.110.171.135:8080/dbs/upload/banner/2.jpg',
+	action:'tab.index-expert-list',
+	type:'',
+	param:'法律-民法'
+},{
+	img:'http://59.110.171.135:8080/dbs/upload/banner/3.jpg',
+	action:'tab.index-expert-list',
+	type:'',
+	param:'形象-着装搭配'
+},{
+	img:'http://59.110.171.135:8080/dbs/upload/banner/4.jpg',
+	action:'tab.index-expert-list',
+	type:'',
+	param:'心理咨询-社会关系'
+},{
+	img:'http://59.110.171.135:8080/dbs/upload/banner/5.png',
+	action:'tab.index-expert-list',
+	type:'',
+	param:'交通工具-配件'
+}];
+
+var _z_banners = [{
+	img:'http://59.110.171.135:8080/dbs/upload/banner/banner1.jpg',
+	action:'tab.index-expert-list',
+	type:'',
+	param:'出行-出行服务'
+},{
+	img:'http://59.110.171.135:8080/dbs/upload/banner/1.jpg',
+	action:'tab.index-expert-list',
+	type:'',
+	param:'形象-美容'
+},{
+	img:'http://59.110.171.135:8080/dbs/upload/banner/2.jpg',
+	action:'tab.index-expert-list',
+	type:'',
+	param:'法律-民法'
+},{
+	img:'http://59.110.171.135:8080/dbs/upload/banner/3.jpg',
+	action:'tab.index-expert-list',
+	type:'',
+	param:'形象-服装'
+},{
+	img:'http://59.110.171.135:8080/dbs/upload/banner/4.jpg',
+	action:'tab.index-expert-list',
+	type:'',
+	param:'心理咨询-社会关系'
+},{
+	img:'http://59.110.171.135:8080/dbs/upload/banner/5.png',
+	action:'tab.index-expert-list',
+	type:'',
+	param:'交通工具-配件'
+}];
+
+var _lastVersion = '1.0.5';

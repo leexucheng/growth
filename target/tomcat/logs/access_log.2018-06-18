@@ -1,0 +1,12 @@
+0:0:0:0:0:0:0:1 - - [18/Jun/2018:22:35:17 +0800] "GET /growth HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [18/Jun/2018:22:35:17 +0800] "GET /growth/ HTTP/1.1" 302 - http-bio-8080-exec-3 55
+0:0:0:0:0:0:0:1 - - [18/Jun/2018:22:35:18 +0800] "GET /growth/jsp/login.jsp HTTP/1.1" 200 2049 http-bio-8080-exec-4 984
+0:0:0:0:0:0:0:1 - - [18/Jun/2018:22:35:18 +0800] "GET /growth/common/themes/icon.css HTTP/1.1" 200 2506 http-bio-8080-exec-2 41
+0:0:0:0:0:0:0:1 - - [18/Jun/2018:22:35:18 +0800] "GET /growth/common/assistant.js HTTP/1.1" 200 503 http-bio-8080-exec-9 7
+0:0:0:0:0:0:0:1 - - [18/Jun/2018:22:35:18 +0800] "GET /growth/common/locale/easyui-lang-zh_CN.js HTTP/1.1" 200 2501 http-bio-8080-exec-8 4
+0:0:0:0:0:0:0:1 - - [18/Jun/2018:22:35:18 +0800] "GET /growth/common/themes/material/easyui.css HTTP/1.1" 200 64385 http-bio-8080-exec-5 84
+0:0:0:0:0:0:0:1 - - [18/Jun/2018:22:35:18 +0800] "GET /growth/common/jquery.min.js HTTP/1.1" 200 95957 http-bio-8080-exec-6 13
+0:0:0:0:0:0:0:1 - - [18/Jun/2018:22:35:18 +0800] "GET /growth/common/jquery.easyui.min.js HTTP/1.1" 200 425249 http-bio-8080-exec-7 37
+0:0:0:0:0:0:0:1 - - [18/Jun/2018:22:35:19 +0800] "GET /growth/common/themes/material/images/passwordbox_open.png HTTP/1.1" 200 160 http-bio-8080-exec-7 8
+0:0:0:0:0:0:0:1 - - [18/Jun/2018:22:35:19 +0800] "GET /growth/common/themes/material/images/blank.gif HTTP/1.1" 200 43 http-bio-8080-exec-7 2
+0:0:0:0:0:0:0:1 - - [18/Jun/2018:22:35:19 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-7 0
